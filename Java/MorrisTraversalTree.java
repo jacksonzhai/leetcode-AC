@@ -7,7 +7,7 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
- public class MorrisInorderTraversalTree {
+ public class MorrisTraversalTree {
      public List<Integer> morrisInorderTree(TreeNode root){
         List<Integer> list = new LinkedList<>();
         TreeNode current = root;
