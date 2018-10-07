@@ -37,4 +37,34 @@
         }
         return list;
      }
+  
+ public List<Integer> morrisPreOrderTree(TreeNode root){
+       List<Integer> list = new LinkedList();
+        TreeNode op = root;
+        while(op != null){
+            if(op.left == null){
+                list.add(op.val);
+                op = op.right;
+            }
+            else{
+                TreeNode pre = op.left;
+                while(pre.right != null && pre.right != op){
+                    pre = pre.right;
+                }
+                if(pre.right == null){
+                    pre.right = op;
+                    list.add(op.val);
+                    op  = op.left;
+                }
+                else{
+                    pre.right = null;
+                    op = op.right;
+                }
+            }
+        }
+        return list;
+        
+    }
+
+  }
  }
