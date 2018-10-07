@@ -1,12 +1,13 @@
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode(int x) { val = x; }
  * }
  */
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
@@ -55,15 +56,16 @@ public class TraverseATreeWithoutRecursion {
         List<Integer> list = new LinkedList<>();
         Stack<TreeNode> stack = new Stack();
         while (root != null) {
-            if (root.right != null) {
-                stack.push(root.right);
-            }
+            stack.push(root.right);
             stack.push(root);
             root = root.left;
         }
         while (!stack.empty()) {
             root = stack.pop();
-            if (root.right != null && root.right == stack.peek()) {
+            if(root == null){
+                continue;
+            }
+            else if (root.right != null && !stack.empty() && root.right == stack.peek()) {
                 stack.pop();
                 stack.push(root);
                 root = root.right;
@@ -77,7 +79,6 @@ public class TraverseATreeWithoutRecursion {
                 root = root.left;
             }
         }
-
 
         return list;
     }
