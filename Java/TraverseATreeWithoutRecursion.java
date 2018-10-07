@@ -38,7 +38,7 @@ public class TraverseATreeWithoutRecursion {
             temp = temp.left;
 
         }
-        while (temp == null && !stack.empty()) {
+        while (!stack.empty()) {
             TreeNode op = stack.pop();
             list.add(op.val);
             temp = op.right;
