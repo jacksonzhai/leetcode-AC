@@ -74,5 +74,6 @@ public class MainClass {
         String out = integerArrayListToString(ret);
 
         System.out.print(out);
+        System.out.println();
     }
 }
