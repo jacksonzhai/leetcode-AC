@@ -1,24 +1,32 @@
+import java.util.Map;
+
 public class Test {
     public static void main(String[] args) {
-
-        int i = 0xFFFFFFFF;
-
-        System.out.println(Integer.toBinaryString(i));
-        System.out.println(Integer.toBinaryString(i).length());
-        System.out.println(Integer.toBinaryString(Integer.MAX_VALUE));
-        System.out.println(Integer.toBinaryString(Integer.MAX_VALUE).length());
-        int q = 1<<31;
-        System.out.println(Integer.toBinaryString(q));
-        System.out.println(Integer.toHexString(q));
-        System.out.println(Integer.toBinaryString(q).length());
-        System.out.println(q);
-        while (q!=1){
-            q >>>= 1;
-            System.out.println(Integer.toBinaryString(q));
-
-
-        }
+        long start =  System.nanoTime();
+        System.out.println(fb(50));
+        System.out.println(System.nanoTime()-start);
+        long start1=  System.nanoTime();
+        System.out.println(fbDP(50));
+        System.out.println(System.nanoTime()-start1);
 
 
     }
+    public static long fb(int n){
+        if(n ==1 || n==2){
+            return 1;
+        }else{
+            return fb(n-1)+ fb(n-2);
+        }
+
+    }
+    public static long fbDP(int n){
+        long[] a = new  long[n];
+        a[0] = 1;
+        a[1] = 1;
+        for(int i = 2;i<n;i++){
+            a[i] = a[i-1] + a[i-2];
+        }
+        return a[n-1];
+    }
+
 }
