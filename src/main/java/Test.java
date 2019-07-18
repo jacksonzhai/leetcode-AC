@@ -2,12 +2,23 @@ import java.util.Map;
 
 public class Test {
     public static void main(String[] args) {
-        long start =  System.nanoTime();
-        System.out.println(fb(50));
-        System.out.println(System.nanoTime()-start);
-        long start1=  System.nanoTime();
-        System.out.println(fbDP(50));
-        System.out.println(System.nanoTime()-start1);
+//        long start =  System.nanoTime();
+//        System.out.println(fb(50));
+//        System.out.println(System.nanoTime()-start);
+//        long start1=  System.nanoTime();
+//        System.out.println(fbDP(50));
+//        System.out.println(System.nanoTime()-start1);
+        long l = 10006L;
+        Long pp = 10006L;
+        Object obj = l;
+        System.out.println(pp.equals(l));
+        System.out.println(obj instanceof Long);
+
+        coffe a[] = new coffe[10];
+        MochaCoffee b[] = new MochaCoffee[10];
+        a = b;
+        coffe c[] = new MochaCoffee[10];
+        c[0] = new coffe();
 
 
     }
