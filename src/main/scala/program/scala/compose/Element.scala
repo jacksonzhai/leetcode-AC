@@ -1,6 +1,6 @@
 package program.scala.compose
 import Eelement._
-abstract class Element {
+abstract  class Element {
   def demo()={
     println("Element's implemention invoked")
   }

@@ -1,6 +1,6 @@
 package program.scala
-import program.scala.compose.Eelement.elem
-import program.scala.compose.Element
+import compose.Eelement._
+import compose._
 object Spiral {
   val space = elem( " ")
   val corner = elem("+")
