@@ -8,18 +8,25 @@ public class Test {
 //        long start1=  System.nanoTime();
 //        System.out.println(fbDP(50));
 //        System.out.println(System.nanoTime()-start1);
-        long l = 10006L;
-        Long pp = 10006L;
-        Object obj = l;
-        System.out.println(pp.equals(l));
-        System.out.println(obj instanceof Long);
-
-        coffe a[] = new coffe[10];
-        MochaCoffee b[] = new MochaCoffee[10];
-        a = b;
-        coffe c[] = new MochaCoffee[10];
-        c[0] = new coffe();
-
+//        long l = 10006L;
+//        Long pp = 10006L;
+//        Object obj = l;
+//        System.out.println(pp.equals(l));
+//        System.out.println(obj instanceof Long);
+//
+//        coffe a[] = new coffe[10];
+//        MochaCoffee b[] = new MochaCoffee[10];
+//        a = b;
+//        coffe c[] = new MochaCoffee[10];
+//        c[0] = new coffe();
+        int low = Integer.MAX_VALUE -4;
+        int high = Integer.MAX_VALUE;
+        System.out.println(low);
+        System.out.println(high);
+        System.out.println((low+high)/2);
+        System.out.println(low+(high-low)/2 );
+        System.out.println((low+high)>>1);
+        System.out.println((low+high)>>>1);
 
     }
     public static long fb(int n){
@@ -39,5 +46,7 @@ public class Test {
         }
         return a[n-1];
     }
+
+
 
 }
