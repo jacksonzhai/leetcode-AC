@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -66,14 +67,16 @@ public class MainClass {
     }
 
     public static void main(String[] args) throws IOException {
-        String line = "[1,2,3]";
-        TreeNode root = stringToTreeNode(line);
-
-        List<Integer> ret = new TraverseATreeWithoutRecursion().postOrderTree(root);
-
-        String out = integerArrayListToString(ret);
-
-        System.out.print(out);
-        System.out.println();
-    }
+//        String line = "[1,2,3]";
+//        TreeNode root = stringToTreeNode(line);
+//
+//        List<Integer> ret = new TraverseATreeWithoutRecursion().postOrderTree(root);
+//
+//        String out = integerArrayListToString(ret);
+//
+//        System.out.print(out);
+//        int[] a = {1,2};
+//        System.out.println(a);
+//
+     }
 }
